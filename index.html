@@ -1,7 +1,173 @@
 <!DOCTYPE html>
 <html>
+
+
+<head>
+  <title>Hangman</title>
+
+
+  <style>
+    .clickbox {
+      height: 100px;
+      width: 200px;
+      background-color: #30ff45ff;
+      border-radius: 10%;
+      display: inline-block;
+      font-family: "Arial";
+      padding: 20px;
+      font-size: 44px;
+    }
+
+    .clicked {
+      background-color: #30ff457f;
+    }
+
+  </style>
+</head>
+
+
 <body>
-<h1>Hello World</h1>
-<p>I'm hosted with GitHub Pages.</p>
+
+  <div style="text-align:center">
+    <h1>Play Hangman</h1>
+    <h2 id="guessdisplay"> </h2>
+    <h3>Click the button below to guess!</h3>
+    <button onclick="playerGuess()" class="clickbox">Go!</button>
+  </div>
+
+  <div style="text-align:center">
+    <img src="http://gg.gg/vedhang1" alt="hang1">
+    <h2>Incorrect Guesses:</h2>
+    <h2 id="wrongguesses"> </h2>
+
+  </div>
+
+  <script>
+    let guessDisplay = document.querySelector("#guessdisplay")    //Display of correct guesses 
+    let message = document.querySelector("h3")
+    let clickBox = document.querySelector("button")               //Button that starts your turn
+    let gallow = document.querySelector("img")
+    let letterDisplay = document.querySelector("#wrongguesses")   //Displays all the wrong guesses so far
+
+    const word = prompt("Please Enter a word for Player 2 to guess.","apple").toUpperCase();
+
+    let wordGuess = " _";
+
+    for (var i = 1; i < word.length ; i++) {     //Stores each letter of the word as an underscore into another string
+	if (word[i] === " ") {
+	    wordGuess = wordGuess + " -";        //Each dash represents a space.
+	} else {
+	    wordGuess = wordGuess + " _";
+	}
+
+    }
+    wordGuess = wordGuess +  " ";
+
+    guessDisplay.textContent = wordGuess;        //Updates display of correct guesses, so far no letters are correct as none have been guessed 
+
+    let notGuessed = true;
+    let letterGuess = "  ";
+    let triesLeft = 8;
+    let guesses = [];
+    let wrongGuesses = [];
+    let occurences = 0;
+
+    function playerGuess() {                             //Function linked to button
+	if (notGuessed && triesLeft > 0) {               //Will return false when the game is over.
+            clickBox.classList.add("clicked")
+
+            do {
+                letterGuess = prompt("Guess a letter","a").toUpperCase();
+            } while (letterGuess.length !== 1 || guesses.includes(letterGuess));  
+
+            guesses.push(letterGuess);                   //Adds the guessed letter to the list of all guessed letters
+
+            if (word.indexOf(letterGuess) !== -1) {      //Returns true if the letter is in the word
+                occurences = 0;
+
+                for (var i = word.indexOf(letterGuess); i < word.length; i++) {
+	            if (letterGuess === word[i]) {
+		        wordGuess = wordGuess.slice(0,2 * i + 1) + letterGuess + wordGuess.slice(2 * i + 2, wordGuess.length)  //Updates the value of correct letter guesses
+		        occurences++;                                                                                          //Increases each time the letter appears in the word
+		        console.log(occurences)
+	    	    }
+
+	        }
+
+	        if (occurences === 1) {
+		    alert("There is 1 " + letterGuess + "!");
+	        } else {
+		    alert("There are " + occurences + " " + letterGuess + "s!"); 
+	        }
+
+	        guessDisplay.textContent = wordGuess;           //Updates the display of correct letter guesses
+
+            } else {          //If the word does not contain the letter
+
+	        wrongGuesses.push(letterGuess);                         //Adds letter to the list of wrong guesses
+		letterDisplay.textContent = wrongGuesses.toString()     //Displays list of wrong guesses on screen
+	        triesLeft--;                                            //Decreases the number of chances left by 1
+
+	        alert("There are no " + letterGuess + "s.")
+	        alert("You have " + triesLeft + " chances left.")
+	    }
+
+
+        }
+
+	switch (triesLeft) {                              //More body parts will be displayed as the number of chances decreases
+	    case 8:
+		gallow.setAttribute("src","http://gg.gg/vedhang1");
+		break;
+	    case 7:
+		gallow.setAttribute("src","http://gg.gg/vedhang2");
+		break;
+	    case 6:
+		gallow.setAttribute("src","http://is.gd/vedhang3");
+		break;
+	    case 5:
+		gallow.setAttribute("src","http://gg.gg/vedhang4");
+		break;
+	    case 4:
+		gallow.setAttribute("src","http://gg.gg/vedhang5");
+		break;
+	    case 3:
+		gallow.setAttribute("src","http://gg.gg/vedhang6");
+		break;
+	    case 2:
+		gallow.setAttribute("src","http://tiny.cc/vedhang7");
+		break;
+	    case 1:
+		gallow.setAttribute("src","http://gg.gg/vedhang8");
+		break;
+	    default:
+		gallow.setAttribute("src","http://gg.gg/vedhang0");      //If there are no chances left, the game ends and the correct word is displayed
+		message.textContent = "You lose.";
+		guessDisplay.textContent = word; 
+	}
+
+	clickBox.classList.remove("clicked");
+
+	var toBeFound = 0;
+	for (var i = 0; i < wordGuess.length; i++) {        //Counts the number of underscores that represent missing letters
+	    if (wordGuess[i] === "_") { 
+		toBeFound++;
+		console.log(toBeFound)
+	    }
+	}
+	if (toBeFound === 0) {                   //Returns true if the word is complete 
+	    notGuessed = false;                  //Ends the game
+	    message.textContent = "You Win!";
+	    wordDisplay.textContent = word;
+	}
+
+    }
+
+
+
+
+  </script>
 </body>
+
+
 </html>
