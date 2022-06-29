@@ -1,0 +1,7 @@
+{% for javascript in page.custom-js %}
+    <script src="{{ javascript | relative_url }}"></script>
+{% endfor %}
+
+{% for javascript in site.data.customs.custom-js %}
+    <script src="{{ javascript | relative_url }}"></script>
+{% endfor %}

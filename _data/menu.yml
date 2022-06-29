@@ -1,0 +1,33 @@
+menu_pages:
+- title: Home
+  url: /
+  category: home
+
+- title: Discography
+  url: /discography/
+  category: discography
+  tooltip: Discography tooltip
+
+- title: Collaborations
+  url: /collaborations/
+  category: collaborations
+  tooltip: Collaborations tooltip
+
+- title: About
+  url: about.html
+  category: about
+  tooltip: This is about
+
+menu_contacts:
+- faicon: fab fa-soundcloud
+  url: 
+  target: _blank
+- faicon: fab fa-twitter
+  url: 
+  target: _blank
+- faicon: fas fa-envelope
+  url:
+  target: 
+- faicon: fas fa-rss
+  url: /feed.xml
+  target: _blank

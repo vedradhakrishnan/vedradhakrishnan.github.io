@@ -1,0 +1,81 @@
+.discography,
+.post-feed {
+    max-width: 100%;
+
+    & &-album {
+        display: flex;
+        flex-direction: row;
+        position: relative;
+
+        &:last-of-type {
+            margin-bottom: 1em;
+        }
+
+        @include mobile {
+            flex-direction: column;
+        }
+
+        &_cover {
+            width: 20vw;
+            height: 20vw;
+            max-width: 500px;
+            max-height: 500px;
+
+            &-wrapper {
+                display: block;
+                margin-right: 1em;
+
+                @include mobile {
+                    margin: 0;
+                    width: 100%;
+                }
+            }
+
+            img {
+                max-height: 20vw;
+            }
+
+            @include mobile {
+                width: 40vw;
+                height: 40vw;
+                margin: auto;
+
+                img {
+                    width: 40vw;
+                    height: 40vw;
+                    max-height: 40vw;
+                }
+            }
+        }
+
+        p,
+        a {
+            font-size: 0.9em;
+            line-height: 1em;
+            font-weight: 300;
+            padding-bottom: 0.5em;
+            color: $p_text;
+        }
+
+        a {
+            @include underline-on-hover($p_text);
+        }
+
+        section {
+            width: 100%;
+        }
+
+        &_title {
+            margin-top: 3vw;
+            font-size: 2em;
+            margin-bottom: 0.6em;
+            @include mobile {
+                text-align: center;
+            }
+        }
+
+        &_summary {
+            padding-bottom: 0.5em;
+        }
+    }
+}

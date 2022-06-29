@@ -1,0 +1,16 @@
+---
+layout: default
+---
+<div class="content-container">
+    <div class="discography">
+        {{ content }}
+        {% for post in paginator.posts %}
+        {% if post.categories contains page.category %}
+        <hr>
+        {% include discography-entry.html currPost=post %}
+        {% endif %}
+        {% endfor %}
+
+        {% include pagination-buttons.html %}
+    </div>
+</div>

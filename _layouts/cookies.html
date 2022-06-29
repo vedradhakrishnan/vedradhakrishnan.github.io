@@ -1,0 +1,30 @@
+---
+layout: default
+---
+<div class="content-container cookies">
+    {{ content }}
+    <hr />
+    <h2>Consents</h2>
+    {% for consent in site.data.metaData.cookies.consent %}
+    <fieldset>
+        <input type="checkbox" id="{{ consent.name }}">
+        <label for="{{ consent.name }}">
+            <strong>{{ consent.name }}</strong>
+            {{ consent.description }}
+        </label>
+    </fieldset>
+    {% endfor %}
+</div>
+<script>
+    const storageType = localStorage;
+    const consents = eval('{{ site.data.metaData.cookies.consent | jsonify }}');
+    consents.forEach(consent => {
+        const element = document.getElementById(consent.name);
+        element.checked = storageType.getItem(consent.cookieName) === "true" || consent.alwaysAgree;
+        element.disabled = consent.alwaysAgree;
+        element.addEventListener("click", () => {
+            storageType.setItem(consent.cookieName, element.checked);
+        });
+        storageType.setItem("interacted_with_cookies_banner", true);
+    });
+</script>

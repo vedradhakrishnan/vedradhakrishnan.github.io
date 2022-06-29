@@ -1,0 +1,20 @@
+author: Site Author
+logo: assets/img/band_logo.png
+clickToEnlargeImages: True
+lang: en
+cookies:
+  enabled: True
+  message: This site might be using cookies! Customize your message or disable cookies in metaData.yml!
+  agreeButtonText: Yes, I agree
+  disagreeButtonText: No, take me to settings
+  agreeButtonFnName: cookiesAcceptDefaultFn
+  disagreeButtonFnName: cookiesDisagreeDefaultFn
+  header: Ask your users if they agree to cookies
+  consent:
+    - name: Google Analytics
+      description: some description describing the purpose of this consent as well as what it will collect and where send
+      cookieName: GA
+    - name: Some other cookie that is always true
+      description: some description describing the purpose of this consent as well as what it will collect and where send
+      cookieName: SA
+      alwaysAgree: true

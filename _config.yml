@@ -1,0 +1,38 @@
+title: minimal-music-project
+tagline: A site showing the usage of Jekyll custom theme
+email: email@example.com
+description: >-
+  This website was created as a demonstration for Jekyll custom theme
+  named minimal-music-project. Its main feature is to make it easy to create
+  websites for music projects
+url: "https://itspatrq.github.io" # the base hostname & protocol for your site, e.g. http://example.com
+author: itspatrq
+twitter:
+  username: itspatrq
+  card: summary
+plugins:
+  - jekyll-seo-tag
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-paginate-v2
+# Build settings
+markdown: kramdown
+remote_theme: ItsPatrq/minimal-music-project
+permalink: /:title.html
+pagination:
+  enabled: true
+  per_page: 4
+  limit: 0
+  sort_field: 'date'
+  sort_reverse: true
+
+  exclude:
+  - CHANGELOG.md
+  - CNAME
+  - Gemfile
+  - Gemfile.lock
+  - LICENSE
+  - README.md
+  - screenshot.png
+  - docs/
+  - node_modules

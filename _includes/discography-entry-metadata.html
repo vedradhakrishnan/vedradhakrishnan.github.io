@@ -1,0 +1,77 @@
+<p class="discography-album_release-date">
+    release date: {{ include.currPost.date | date_to_long_string }}
+</p>
+
+{% if include.currPost.type %}
+<p class="discography-album_type">
+    release type: {{ include.currPost.type }}
+</p>
+{% endif %}
+
+{% assign playArray = include.currPost.play | size %}
+{% if playArray != 0 %}
+<p class="discography-album_play">
+    play:
+    {% for play in include.currPost.play %}
+    <a href="{{ play.url }}" target="_blank">{{ play.name }}</a>
+    {% if forloop.last == false %}
+    |
+    {% endif %}
+    {% endfor %}
+</p>
+{% endif %}
+
+{% assign downloadArray = include.currPost.download | size %}
+{% if downloadArray != 0 %}
+<p class="discography-album_download">
+    download:
+    {% for download in include.currPost.download %}
+    <a href="{{ download.url }}" target="_blank">{{ download.name }}</a>
+    {% if forloop.last == false %}
+    |
+    {% endif %}
+    {% endfor %}
+</p>
+{% endif %}
+
+{% assign buyArray = include.currPost.buy | size %}
+{% if buyArray != 0 %}
+<p class="discography-album_buy">
+    buy from:
+    {% for buy in include.currPost.buy %}
+    <a href="{{ buy.url }}" target="_blank">{{ buy.name }}</a>
+    {% if forloop.last == false %}
+    |
+    {% endif %}
+    {% endfor %}
+</p>
+{% endif %}
+
+{% assign otherArray = include.currPost.other | size %}
+{% if otherArray != 0 %}
+<p class="discography-album_other">
+    other links:
+    {% for other in include.currPost.other %}
+    <a href="{{ other.url }}" target="_blank">{{ other.name }}</a>
+    {% if forloop.last == false %}
+    |
+    {% endif %}
+    {% endfor %}
+</p>
+{% endif %}
+
+{% if include.currPost.embed_player %}
+    {% if include.currPost.embed_player.type ==	"audio_file" %}
+        {% include music-player.html audioData=include.currPost.embed_player %}
+    {% else %}
+        <iframe
+            class="embedded-player hidden"
+            givenSrc="{{include.currPost.embed_player.src}}"
+            type="{{include.currPost.embed_player.type}}"
+            allow="encrypted-media; picture-in-picture"
+            height="80"
+            frameborder="0"
+            scrolling="no">
+        </iframe>
+    {% endif %}
+{% endif %}

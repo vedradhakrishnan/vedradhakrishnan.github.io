@@ -1,0 +1,41 @@
+<article class="discography-album">
+    <header>
+        <figure class="discography-album_cover-wrapper">
+            <div class="discography-album_cover">
+                <div class="click-to-enlarge">
+                    <img
+                        click-to-enlarge
+                        {% if include.currPost.image_alt %}
+                        alt="{{ include.currPost.image_alt }}"
+                        {% endif %}
+                        src="{{ include.currPost.image | relative_url }}"
+                        {% if include.currPost.responsiveImage %}
+                        srcset="{% for img in include.currPost.responsiveImage %}{{ img.src | relative_url }} {{ img.size }}w{% if forloop.last == false %},{% endif %}{% endfor %}"
+                        sizes="30vw"
+                        {% endif %}
+                    />
+                </div>
+            </div>
+        </figure>
+    </header>
+    <section>
+        {% if include.currPost.external_url %}
+        <a href="{{ include.currPost.external_url | relative_url }}" target="_blank">
+            {% else %}
+            <a href="{{ include.currPost.url | relative_url }}">
+                {% endif %}
+                <h2 class="discography-album_title">
+                    {{ include.currPost.title }}
+                </h2>
+            </a>
+            <p class="discography-album_summary">
+                {% if include.currPost.description %}
+                {{ include.currPost.description }}
+                {% else %}
+                {{ include.currPost.excerpt | strip_html }}
+                {% endif %}
+            </p>
+            {% include discography-entry-metadata.html currPost=include.currPost %}
+        </section>
+    {% include read-more.html currPost=include.currPost %}
+</article>
