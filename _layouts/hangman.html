@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+
+<head>
+  <title>Hangman</title>
+
+
+  <style>
+    .clickbox {
+      height: 100px;
+      width: 200px;
+      background-color: #30ff45ff;
+      border-radius: 10%;
+      display: inline-block;
+      font-family: "Arial";
+      padding: 20px;
+      font-size: 44px;
+    }
+
+    .clicked {
+      background-color: #30ff457f;
+    }
+
+  </style>
+</head>
+
+
+<body>
+
+  <div style="text-align:center">
+    <h1>Play Hangman</h1>
+    <h2 id="guessdisplay"> </h2>
+    <h3>Click the button below to guess!</h3>
+    <button onclick="playerGuess()" class="clickbox">Go!</button>
+  </div>
+
+  <div style="text-align:center">
+    <img src="http://gg.gg/vedhang1" alt="hang1">
+    <h2>Incorrect Guesses:</h2>
+    <h2 id="wrongguesses"> </h2>
+
+  </div>
+
+</body>
+
+
+</html>
