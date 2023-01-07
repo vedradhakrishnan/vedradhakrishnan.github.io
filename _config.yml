@@ -1,8 +1,8 @@
-title: Moonwalk
+title: Hi, I'm Ved
 author: Abhinav Saxena
 url: https://vedradhakrishnan.github.io/ # root address of the site
 description: > # description of the site (multiple lines allowed)
-  Moonwalk is a fast and elegant Jekyll theme with a clean dark mode. It comes with horizontal list (for navbar and footer), card list (for portfolio), and a generic vertical list. It is very easy to modify in case you want to build over it - please see _layouts/home.html to do that.
+  I held up the corner of the icosahedron to my eye, trying to peer at its hollow interior. Every day in after-care, I tinkered with geometric tiles in my elementary school cafeteria. I was fascinated by how repetitions of certain tiles came together to create intricate 3-dimensional shapes; different rearrangements yielded an infinite number of solids, and each afternoon unlocked a new possibility.
 
 permalink: /:slug
 
