@@ -1,9 +1,9 @@
 navbar_entries:
-  - title: about
+  - title: About
     url: about
 
-  - title: blog
-    url: blog
+  - title: Music
+    url: discography
 
   - title: 13MmHyperloop
     url: 13Mm-mission
@@ -54,18 +54,27 @@ old_project_entries:
     url: https://www.humangous.co
     desc: The better people know you, the better they collaborate
 
-footer_entries:
-  - title: abhinav's homepage
-    url: https://www.abhinav.co
+song_entries:
+  - title: bourne vita
+    url: bourne-vita
+    desc: This is an example project, configured in _data/home.yml
 
-  - title: twitter
-    url: https://twitter.com/abhinav
+  - title: pluto_two
+    url: pluto
+    desc: Projects are shown in card layout
+
+footer_entries:
+  - title: homepage
+    url: https://vedradhakrishnan.com/
 
   - title: github
-    url: https://github.com/abhinavs
+    url: https://github.com/vedradhakrishnan
 
-  - title: feed
-    url: feed.xml
+  - title: soundcloud
+    url: https://soundcloud.com/ved-radhakrishnan
+
+  - title: instagram
+    url: https://www.instagram.com/vedradhak/
 
 misc_entries:
   - title: this is an example vertical list

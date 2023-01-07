@@ -28,6 +28,7 @@ theme_config:
   show_copyright: true # show copyright notice in footer
   # following keys are using to create home layout
   show_projects: true # show projects as cards, add in _data/home.yml
+  show_music: true #show songs as cards
   show_blog: true # show blog posts added in _posts
   show_old_projects: true # show old projects as cards, add in _data/home.yml
   show_misc_list: false # show generic vertical list for misc details, add _data/home.yml
@@ -36,9 +37,10 @@ theme_config:
   # options for "home" page
   home:
     title_projects: Projects & Portfolio
+    title_music: Music Discography
     title_misc_list: Details
     title_blog: Music
-    title_old_projects: Old Projects
+    title_old_projects: Music Discography
 
 soopr:
   publish_token: "" # sign up at https://www.soopr.co to get your publish token and personalize share and reaction options
