@@ -5,7 +5,7 @@ navbar_entries:
   - title: blog
     url: blog
 
-  - title: website
+  - title: 13MmHyperloop
     url: https://www.abhinav.co
 
 project_entries:
@@ -38,7 +38,7 @@ project_entries:
 old_project_entries:
   - title: Soopr
     url: https://www.soopr.co
-    desc: Delight your readers - add beautiful share and like buttons easily to your websites 
+    desc: Delight your readers - add beautiful share and like buttons easily to your websites
     highlight: NEW
 
   - title: Cookie
@@ -97,5 +97,3 @@ misc_entries:
 
           - title: it is easy to use, see _data/home.yml to see how to configure it.
             url: false
-
-
