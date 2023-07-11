@@ -10,37 +10,37 @@ navbar_entries:
     # url: https://www.abhinav.co
 
 project_entries:
-  - title: Project 1
-    url: overview-post
-    desc: This is an example project, configured in _data/home.yml
+  - title: Music Visualiser
+    url: music-visualiser
+    desc: Accompanying visuals to music pieces
     thumbnail: "./assets/images/thumbnails/default.png"
 
-  - title: Project 2
-    url: overview-post
-    desc: Projects are shown in card layout
+  - title: ChromeBuddy
+    url: https://devpost.com/software/chromebuddy
+    desc: Streamlines online tasks with the power of LLMs
     thumbnail: "./assets/images/thumbnails/default.png"
 
-  - title: Project 3
-    url: overview-post
-    desc: You can control visibility from _config.yml file
+  - title: Vex Robotics Spin Up
+    url: https://github.com/vedradhakrishnan/6121E-Spin-Up
+    desc: Our entry for the 2023 Vex Robotics Competition
     thumbnail: "./assets/images/thumbnails/default.png"
 
-  - title: Project 4
-    url: overview-post
-    desc: This project uses highlight markup, configured in _data/home.yml
-    highlight: WIP
-    thumbnail: "./assets/images/thumbnails/default.png"
-
-  - title: Project 5
-    url: overview-post
-    desc: Moonwalk also has horizontal list (used in header and footer)
-    highlight: WIP
-    thumbnail: "./assets/images/thumbnails/radon.png"
-
-  - title: Project 6
-    url: overview-post
-    desc: It also has a scalable vertical list (in case you need it)
-    thumbnail: "./assets/images/thumbnails/default.png"
+  # - title: Project 4
+  #   url: overview-post
+  #   desc: This project uses highlight markup, configured in _data/home.yml
+  #   highlight: WIP
+  #   thumbnail: "./assets/images/thumbnails/default.png"
+  #
+  # - title: Project 5
+  #   url: overview-post
+  #   desc: Moonwalk also has horizontal list (used in header and footer)
+  #   highlight: WIP
+  #   thumbnail: "./assets/images/thumbnails/radon.png"
+  #
+  # - title: Project 6
+  #   url: overview-post
+  #   desc: It also has a scalable vertical list (in case you need it)
+  #   thumbnail: "./assets/images/thumbnails/default.png"
 
 old_project_entries:
   - title: Soopr
@@ -62,12 +62,31 @@ old_project_entries:
 
 song_entries:
   - title: bourne vita
-    url: bourne-vita
-    desc: This is an example project, configured in _data/home.yml
+    url: https://soundcloud.com/ved-radhakrishnan/bourne-vita-1?si=fc53696236d9460fb45516c60ccee8f2&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing
+    desc: Made in July 2022
+
+  - title: memory
+    url: https://soundcloud.com/ved-radhakrishnan/memory-remastered3?si=90f3b6fd27e547a795cbec51c1d00e03&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing
+    desc: Made in July 2021
+
+  - title: prelude
+    url: https://soundcloud.com/ved-radhakrishnan/prelude?si=c28a34c6682b4a349867308d8b30f7e7&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing
+    desc: Made in September 2020
+
+  - title: torrent
+    url: https://soundcloud.com/ved-radhakrishnan/torrent-1?si=456adf346d5a4c5f88fc3853498668bf&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing
+    desc: Made in March 2021
 
   - title: pluto_two
-    url: pluto
-    desc: Projects are shown in card layout
+    url: https://soundcloud.com/ved-radhakrishnan/pluto_two?si=11ebf668dee44fa9afc4ca2f77c27063&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing
+    desc: Made in Nov 2022
+  # - title: bourne vita
+  #   url: bourne-vita
+  #   desc: This is an example project, configured in _data/home.yml
+  #
+  # - title: pluto_two
+  #   url: pluto
+  #   desc: Projects are shown in card layout
 
 footer_entries:
   - title: homepage

@@ -1,7 +1,7 @@
 ---
 layout: mission
 title: 13MmHyperloop
-subtitle: Our mission—
+subtitle: Our mission
 #subtitle-2: Our vision—
 ---
 
