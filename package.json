@@ -3,17 +3,22 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "homepage": "https://vedradhakrishnan.github.io/",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -b master -d build"
+
   },
   "dependencies": {
     "@react-three/drei": "^9.121.3",
     "@react-three/fiber": "^8.17.12",
     "@react-three/postprocessing": "^2.19.1",
     "@tailwindcss/vite": "^4.0.0",
+    "gh-pages": "^6.3.0",
     "leva": "^0.10.0",
     "lucide-react": "^0.474.0",
     "postprocessing": "^6.36.6",

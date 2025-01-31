@@ -8,11 +8,11 @@ import CanvasLoader from './components/CanvasLoader';
 import Overlay from './components/Overlay';
 
 const Scene = () => {
-  const x = useControls('Tablet', {
-    positionX: { value: 2.5, min: -10, max: 10 },
-    positionY: { value: 2.5, min: -10, max: 10 },
-    positionZ: { value: 2.5, min: -10, max: 10 },
-  });
+  // const x = useControls('Tablet', {
+  //   positionX: { value: 2.5, min: -10, max: 10 },
+  //   positionY: { value: 2.5, min: -10, max: 10 },
+  //   positionZ: { value: 2.5, min: -10, max: 10 },
+  // });
 
   return (
     <div className="w-full h-full fixed top-0 left-0">
@@ -34,10 +34,10 @@ const Scene = () => {
           <MovingPlane />
 
           {/* Tablet */}
-          <Tablet scale={1} position={[x.positionX, x.positionY, x.positionZ]} rotation={[0, 0, 1.57]} />
+          {/* <Tablet scale={1} position={[x.positionX, x.positionY, x.positionZ]} rotation={[0, 0, 1.57]} /> */}
 
           {/* Orbit Controls */}
-          <OrbitControls enableDamping />
+          {/* <OrbitControls enableDamping /> */}
         </Suspense>
       </Canvas>
 
